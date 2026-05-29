@@ -10,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PremiumCare — Doctor App",
-  description: "Premium doctor appointments & clinic management",
+  title: "MediLink — Healthcare, Anytime",
+  description: "Find doctors, book instantly, get care — anywhere in India",
 };
 
 export default function RootLayout({

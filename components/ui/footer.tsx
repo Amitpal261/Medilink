@@ -13,8 +13,8 @@ export function Footer() {
           <div className="space-y-4 lg:col-span-4">
             <Logo />
             <p className="max-w-sm text-sm leading-6 text-slate-600 dark:text-slate-300">
-              PremiumCare is a modern doctor appointment platform—fast bookings, clean workflows, and a calm premium
-              experience for patients and clinics.
+              MediLink connects you with doctors across India—instant bookings, simple workflows, and care when you need
+              it.
             </p>
             <div className="flex items-center gap-2">
               <IconLink href="#" label="X">
@@ -75,7 +75,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-2 border-t border-[--border] pt-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between dark:text-slate-400">
-          <p>© {new Date().getFullYear()} PremiumCare. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} MediLink. All rights reserved.</p>
           <p>Built with Next.js App Router + Tailwind CSS.</p>
         </div>
       </Container>

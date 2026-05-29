@@ -1,16 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0b1220;
-  --muted: #667085;
+  --background: #f8fafb;
+  --foreground: #0d1117;
+  --muted: #6b7280;
   --card: #ffffff;
-  --border: rgba(15, 23, 42, 0.08);
-  --primary: #2563eb;
-  --primary-600: #1d4ed8;
+  --border: rgba(15, 23, 42, 0.09);
+  --primary: #0d9488;
+  --primary-600: #0f766e;
+  --primary-50: #f0fdfa;
+  --accent: #6366f1;
   --success: #16a34a;
   --danger: #ef4444;
-  --ring: rgba(37, 99, 235, 0.22);
+  --warning: #f59e0b;
+  --ring: rgba(13, 148, 136, 0.25);
+  --radius: 12px;
+  --radius-sm: 8px;
 }
 
 @theme inline {
@@ -22,12 +27,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #151617;
-    --foreground: #eef2ff;
-    --muted: #a3aed0;
-    --card: rgba(8, 10, 16, 0.72);
-    --border: rgba(148, 163, 184, 0.14);
-    --ring: rgba(147, 197, 253, 0.18);
+    --background: #0a0f14;
+    --foreground: #e8edf2;
+    --muted: #94a3b8;
+    --card: rgba(15, 23, 42, 0.80);
+    --border: rgba(148, 163, 184, 0.12);
+    --primary: #2dd4bf;
+    --primary-600: #14b8a6;
+    --ring: rgba(45, 212, 191, 0.2);
   }
 }
 
@@ -43,19 +50,25 @@ body {
 }
 
 ::selection {
-  background: rgba(37, 99, 235, 0.22);
+  background: rgba(13, 148, 136, 0.22);
 }
 
 .glass {
-  background: color-mix(in srgb, white 72%, transparent);
+  background: color-mix(in srgb, white 78%, transparent);
   border: 1px solid var(--border);
-  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.06), 0 20px 60px rgba(15, 23, 42, 0.08);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
-
 .glass-dark {
-  background: color-mix(in srgb, #0b1220 55%, transparent);
+  background: color-mix(in srgb, #0a0f14 60%, transparent);
   border: 1px solid var(--border);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04), 0 30px 80px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(13, 148, 136, 0.12);
 }

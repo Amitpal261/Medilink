@@ -1,14 +1,14 @@
 import Link from "next/link";
-import { HeartPulse } from "lucide-react";
+import { Heart } from "lucide-react";
 
 export function Logo() {
   return (
     <Link href="/" className="inline-flex items-center gap-2 font-semibold tracking-tight">
-      <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900">
-        <HeartPulse className="h-5 w-5" />
+      <Heart className="text-teal-500" size={18} />
+      <span>
+        <span className="font-bold text-teal-600">Medi</span>
+        <span className="font-bold text-zinc-800 dark:text-zinc-100">Link</span>
       </span>
-      <span>PremiumCare</span>
     </Link>
   );
 }
-
