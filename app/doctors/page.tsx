@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { DoctorList } from "@/components/doctor/doctor-list";
 import { Container } from "@/components/ui/container";
 
@@ -6,37 +7,40 @@ export const dynamic = "force-dynamic";
 export default async function DoctorsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ doctorId?: string }>;
+  searchParams: Promise<{ doctorId?: string; specialty?: string }>;
 }) {
   const sp = await searchParams;
+
   return (
-    <div
-      className="relative min-h-screen w-full overflow-hidden"
-      style={{
-        backgroundImage:
-          'url("https://plus.unsplash.com/premium_vector-1724477408083-5b3456a876ed?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      {/* Black overlay */}
-      <div className="pointer-events-none absolute inset-0 z-0 bg-black/70" />
-      <Container className="relative py-16 sm:py-20 z-10">
+    <div className="min-h-screen bg-black py-12 dark:bg-[--background] sm:py-16">
+      <Container className="space-y-8">
+        <header className="space-y-3">
+          <h1 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-4xl">
+            Find your{" "}
+            <span className="relative inline-block">
+              doctor
+              <span
+                className="absolute -bottom-1 left-0 h-1 w-full rounded-full bg-teal-500"
+                aria-hidden
+              />
+            </span>
+          </h1>
+          <p className="max-w-xl text-zinc-600 dark:text-zinc-400">
+            Verified specialists in Pune. Transparent fees. Instant booking.
+          </p>
+          <Link
+            href="/triage"
+            className="inline-block text-sm font-medium text-teal-600 transition-colors hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300"
+          >
+            Not sure which doctor you need? → Try AI symptom check
+          </Link>
+        </header>
 
-
-        <div className="space-y-6">
-          <div>
-            <h1 className="text-2xl font-semibold tracking-tight">Doctors</h1>
-            <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-300">
-              Browse specialists and book your appointment in a premium flow.
-            </p>
-          </div>
-          <DoctorList initialDoctorId={sp.doctorId ?? null} />
-        </div>
+        <DoctorList
+          initialDoctorId={sp.doctorId ?? null}
+          initialSpecialty={sp.specialty ?? null}
+        />
       </Container>
-      </div>
-    
-      );
+    </div>
+  );
 }
-
