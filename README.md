@@ -43,7 +43,7 @@ into a **unified healthcare ecosystem**.
 ## 📸 Preview
 
 <p align="center">
-  <img src="./public/medilink-preview.png" width="80%" alt="MediLink Preview"/>
+  <img src="./public/doctors-lists.png" width="80%" alt="MediLink Preview"/>
 </p>
 
 ---
