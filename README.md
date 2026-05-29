@@ -20,7 +20,7 @@ Built using **Next.js App Router**, the project follows a clean modular architec
 ---
 ## 📸 Preview
 
-![MediLink App Screenshot](./medilink-doctors.netlify.app_(Nest Hub).png)
+![MediLink Preview](./medilink-preview.png)
 
 ---
 ## 🚀 Core Features
