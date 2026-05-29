@@ -1,8 +1,9 @@
+"use client";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Logo } from "@/components/ui/logo";
 import { Button } from "@/components/ui/button";
-import { GitHub, Linkedin, X } from "lucide-react";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export function Footer() {
   return (
@@ -17,13 +18,13 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-2">
               <IconLink href="#" label="X">
-                <X className="h-4 w-4" />
+                  <FaTwitter className="h-4 w-4" />
               </IconLink>
               <IconLink href="#" label="LinkedIn">
-                <Linkedin className="h-4 w-4" />
+                <FaLinkedin className="h-4 w-4" />
               </IconLink>
               <IconLink href="#" label="GitHub">
-                <GitHub className="h-4 w-4" />
+                <FaGithub className="h-4 w-4" />
               </IconLink>
             </div>
           </div>

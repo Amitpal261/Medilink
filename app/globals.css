@@ -22,7 +22,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #05070c;
+    --background: #151617;
     --foreground: #eef2ff;
     --muted: #a3aed0;
     --card: rgba(8, 10, 16, 0.72);
