@@ -1,36 +1,216 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏥 MediLink — Fullstack Doctor Appointment Platform
 
-## Getting Started
+> Healthcare platform built with Next.js App Router — connecting patients, doctors, and admins in one unified system.
 
-First, run the development server:
+🌐 **Live Demo:** https://medilink-doctors.netlify.app/
+📦 **Repository:** https://github.com/Amitpal261/Medilink
+
+---
+
+## ✨ Overview
+
+**MediLink** is a modern fullstack healthcare web application that enables:
+
+* Patients to find doctors & book appointments
+* Doctors to manage their profiles
+* Admins to manage users and system data
+
+Built using **Next.js App Router**, the project follows a clean modular architecture with server APIs, reusable UI components, and role-based dashboards.
+
+---
+## 📸 Preview
+
+![MediLink App Screenshot](./medilink-doctors.netlify.app_(Nest Hub).png)
+
+---
+## 🚀 Core Features
+
+
+### 🔐 Authentication System
+
+* User registration & login
+* Secure session handling
+* Role-based access (Admin / Doctor / Patient)
+
+---
+
+### 🩺 Doctor Management
+
+* View doctors list
+* Doctor profile creation & update
+* Dedicated doctor dashboard
+
+---
+
+### 📅 Appointment System
+
+* Book appointments with doctors
+* View & manage appointments
+* Dynamic appointment panel UI
+
+---
+
+### 👨‍⚕️ Role-Based Dashboards
+
+* **Admin:** Manage users
+* **Doctor:** Manage profile
+* **Patient:** View bookings
+
+---
+
+### 🧠 Triage System
+
+* Symptom-based triage flow
+* Helps guide users before booking
+
+---
+
+## 🏗️ Project Structure
+
+```bash
+app/
+ ├── (auth)/           # Login & Register pages
+ ├── (dashboard)/      # Role-based dashboards
+ │    ├── admin/
+ │    ├── doctor/
+ │    └── patient/
+ ├── api/              # Backend (Next.js API routes)
+ │    ├── auth/
+ │    ├── doctors/
+ │    ├── appointments/
+ │    └── users/
+ ├── doctors/          # Doctors listing page
+ ├── appointments/     # Appointment UI
+ └── triage/           # Symptom triage
+
+components/
+ ├── ui/               # Reusable UI components
+ ├── forms/            # Auth forms
+ ├── doctor/           # Doctor components
+ └── appointment/      # Appointment components
+
+lib/
+ ├── db.ts             # Database connection
+ ├── auth.ts           # Auth utilities
+ └── validators/       # Zod validation
+
+models/
+ ├── User.ts
+ ├── Doctor.ts
+ └── Appointment.ts
+```
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend + Backend (Fullstack)
+
+* **Next.js 13+ (App Router)**
+* **React**
+* **TypeScript**
+
+### Styling
+
+* **Tailwind CSS**
+
+### Backend Logic
+
+* **Next.js API Routes**
+* **Custom services layer**
+
+### Database
+
+* Likely **MongoDB / SQL (via models)**
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/Amitpal261/Medilink.git
+cd Medilink
+```
+
+---
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+### 3️⃣ Configure Environment Variables
+
+Create a `.env.local` file:
+
+```env
+DATABASE_URL=
+JWT_SECRET=
+NEXT_PUBLIC_BASE_URL=
+```
+
+---
+
+### 4️⃣ Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌍 Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* Hosted on **Netlify**
+* Uses Next.js SSR/Edge-compatible setup
 
-## Learn More
+👉 https://medilink-doctors.netlify.app/
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧩 Key Concepts Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* App Router architecture
+* Server + Client components
+* API route handling
+* Custom hooks (`useAuth`, `useAppointments`)
+* Role-based UI rendering
+* Modular folder structure
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚧 Future Improvements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* 🔔 Notifications system
+* 💳 Payment integration
+* 🤖 Advanced AI triage
+* 📱 Mobile responsiveness improvements
+* 🧑‍⚕️ Doctor availability scheduling
+
+---
+
+## ⚠️ Disclaimer
+
+> This project is for educational/demo purposes.
+> Not intended for real medical decision-making.
+
+---
+
+## 👨‍💻 Author
+
+**Amitpal**
+
+GitHub: https://github.com/Amitpal261
+
+---
+
+## 💡 Final Thought
+
+> “Good software doesn’t just solve problems — it creates better systems.”
+
+---
